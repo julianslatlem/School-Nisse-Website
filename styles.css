@@ -1,21 +1,326 @@
-body {
-    background: #1f1f1f;
-    color: white;
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-}
-
-.top {
-    background: #181818;
+*{
+    box-sizing: border-box;
+  }
+  
+.about {
+    text-align: center;
+    padding-top: 10%;
     width: 100%;
-    height: 60px;
-    position: absolute;
 }
 
-h1 {
+  body {
+    font-family: verdana, arial, sans-serif;
+    background-color: #3e3e49;
+    color: white;
+    margin: 0;
+  }
+  
+  header{
+    width: 100%;
+    background-color: inherit;
+    text-align: center;
+  }
+  
+  nav{
+    float: left; /*Gjør at child-elementer som flyter (float), holder seg inne i boksen */
+    width: 100%;
+    background-color: #24262e;  
+    position:sticky; /*Gjør at menylinja fester seg til et fast punkt i vinduet når man skroller. Hvor den fester seg, angir man med top, left, right og/eller bottom, som på neste linje.*/
+    top: 0px;
+    z-index: 1000;
+  }
+  
+  nav ul {
+    margin:0;
+    padding:0;
+  }
+  
+  nav li {
     float: left;
-    padding: 10px;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    list-style-type: none;
+    border-right: 0px solid #000000;
+  }
+  
+  nav a {
+    display: block;
+    text-decoration:none;
+    color: white;
+    padding: 1em;
+    background-color: #3c516b;
+  }
+  
+  nav a:hover{
+    background-color: #acb5c0;
+    color: #000000;
+  }
+  
+  main, footer{
+    clear:left;
+    width: 90%;
+    padding: 1em;
+    margin: auto;
+  }
+  
+  code{
+    font-size: 1.3em;
+  }
+
+  .spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+}
+
+.purple {
+    background: #560090;
+}
+
+.layer5 {
+    background-image: url(svg/layer5.svg);
+}
+
+.layer5-2 {
+    background-image: url(svg/layer5-2.svg);
+}
+
+.red-dark {
+    background: #1a0018;
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 260px;
+}
+
+.wave .shape-fill {
+    fill: #00141a;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+}
+
+.bottom {
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.blue {
+    background: #3c31dd;
+}
+
+.light-blue {
+    background: #00c9ff;
+}
+
+.red {
+    background: #dd3f31;
+}
+
+.pink {
+    background: #ff0375;
+}
+
+.dark {
+    background: #0f0f12;
+}
+
+.green {
+    background: #005f09;
+}
+
+.purple {
+    background: #560090;
+}
+
+.yellow {
+    background: #ffd100;
+}
+
+.aqua-dark {
+    background: #001c1a;
+}
+
+.magenta-dark {
+    background: #130026;
+}
+
+.pink-dark {
+    background: #160613;
+}
+
+.blue-dark {
+    background: #00141a;
+}
+
+.yellow-dark {
+    background: #0a1800;
+}
+
+.red-dark {
+    background: #1a0018;
+}
+
+.bubble::after {
+    content: "";
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    height: 90%;
+    width: 100%;
+    background-color: #0f0f12;
+    z-index: -1;
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 260px;
+}
+
+.wave .shape-fill {
+    fill: #00141a;
+}
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.spacer-short {
+    aspect-ratio: 960/100;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.spacer-medium {
+    aspect-ratio: 960/150;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.layer1 {
+    background-image: url(./svg/layer1.svg);
+}
+
+.layer2 {
+    background-image: url(./svg/layer2.svg);
+}
+
+.layer2-2 {
+    background-image: url(./svg/layer2-2.svg);
+}
+
+.layer3 {
+    background-image: url(./svg/blue6.svg);
+}
+
+.layer3-2 {
+    background-image: url(./svg/blue5.svg);
+}
+
+.layer4 {
+    background-image: url(./svg/layer4.svg);
+}
+
+.layer4-2 {
+    background-image: url(./svg/layer4-2.svg);
+}
+
+.layer5 {
+    background-image: url(./svg/layer5.svg);
+}
+
+.layer5-2 {
+    background-image: url(./svg/layer5-2.svg);
+}
+
+.layer6 {
+    background-image: url(./svg/layer6.svg);
+}
+
+.layer6-2 {
+    background-image: url(./svg/layer6-2.svg);
+}
+
+.toplayer {
+    background-image: url(./svg/toplayer.svg);
+    background-position-y: 9%;
+}
+
+.transition {
+    background-image: url(./svg/transition.svg);
+}
+
+.topblob {
+    background-image: url(./svg/topBlob.svg);
+    display: block;
+}
+
+.flip {
+    transform: rotate(180deg);
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #aaaaaa45;
+  }
