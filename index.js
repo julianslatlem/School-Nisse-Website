@@ -6,5 +6,6 @@ function randIntRange(min, max) {
 
 function buttonPressed() {
     document.getElementById("number").innerHTML = randIntRange(1, 100);
-    window.alert("Generated random number.");
+    console.log("Generated random number.");
+    //window.alert("Generated random number.");
 }
